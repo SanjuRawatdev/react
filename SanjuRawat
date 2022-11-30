@@ -1,0 +1,503 @@
+Aap.js----------------------
+import "./styles.css";
+import Header from "./Header";
+import Footer from "./Footer";
+
+export default function App() {
+  return (
+    <div className="App">
+      <Header />
+      <Footer />
+    </div>
+  );
+}
+Header.js-------------------
+import "./styles.css";
+import { Outlet, Link } from "react-router-dom";
+export default function Header() {
+  return (
+    <div className="Header">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a style={{ color: "white" }} class="navbar-brand" href="#">
+              Sanju Rawat
+            </a>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active">
+              <Link to="/">Home</Link>
+            </li>
+            <li class="active">
+              <Link to="/about">About Us</Link>
+            </li>
+            <li class="active">
+              <Link to="/gerlly">Gallery</Link>
+            </li>
+            <li class="active">
+              <Link to="/skill">Skill</Link>
+            </li>
+            <li class="active">
+              <Link to="/contact">Contact</Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <Outlet />
+    </div>
+  );
+}
+Footer.js--------------
+import { BsFacebook } from "react-icons/bs";
+import { BsGoogle } from "react-icons/bs";
+import { BsInstagram } from "react-icons/bs";
+import { BsTwitter } from "react-icons/bs";
+import { BsLinkedin } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
+
+export default function Footer() {
+  return (
+    <div className="Footer ">
+      <footer
+        style={{ backgroundColor: "black" }}
+        class="bg-dark text-center text-white"
+      >
+        <div class="container p-4 pb-0">
+          <section class="mb-4">
+            <a
+              class="btn btn-outline-light btn-floating m-1"
+              href="#!"
+              role="button"
+            >
+              <h2>
+                <BsFacebook />
+              </h2>
+            </a>
+
+            <a
+              class="btn btn-outline-light btn-floating m-1"
+              href="#!"
+              role="button"
+            >
+              <h2>
+                <BsGoogle />
+              </h2>
+            </a>
+
+            <a
+              class="btn btn-outline-light btn-floating m-1"
+              href="#!"
+              role="button"
+            >
+              <h2>
+                <BsInstagram />
+              </h2>
+            </a>
+
+            <a
+              class="btn btn-outline-light btn-floating m-1"
+              href="#!"
+              role="button"
+            >
+              <h2>
+                <BsTwitter />
+              </h2>
+            </a>
+
+            <a
+              class="btn btn-outline-light btn-floating m-1"
+              href="#!"
+              role="button"
+            >
+              <h2>
+                <BsLinkedin />
+              </h2>
+            </a>
+
+            <a
+              class="btn btn-outline-light btn-floating m-1"
+              href="#!"
+              role="button"
+            >
+              <h2>
+                <BsGithub />
+              </h2>
+            </a>
+          </section>
+          <hr style={{ width: "100%" }} />
+        </div>
+        <div class="text-center p-3" style={{ color: "white" }}>
+          <h3>All rights are reserved. This site is created by Sanju Rawat.</h3>{" "}
+        </div>
+      </footer>
+    </div>
+  );
+}
+Home.js------------------
+import "./styles.css";
+export default function Home() {
+  return (
+    <div className="Home">
+      <br />
+      <br />
+      <br />
+      <br />
+      <h1> Welcome!</h1>
+      <h1> My Website</h1>
+      <br />
+      <br />
+      <br />
+      <br />
+    </div>
+  );
+}
+About.js---------------------
+import "./styles.css";
+import ReactImageShapes from "react-image-shapes";
+export default function About() {
+  return (
+    <div className="About">
+      <br />
+      <br /> {" "}
+      <div id="about">
+          <br />              <h1 style={{ textAlign: "center" }}>About me</h1> 
+         {" "}
+        <table>
+          <tr>
+            <td>
+                     {" "}
+              <ReactImageShapes
+                image={require("./image/WhatsApp Image 2022-11-27 at 4.53.39 PM.jpeg")}
+                width="400px"
+                height="400px"
+                type="circle"
+              />
+            </td>
+                   {" "}
+            <td>
+                             {" "}
+              <h2>
+                <b>My name is Sanju Rawat</b>
+              </h2>
+              <h3>
+                <p>I am prosoing B.C.A. first year from in jagriti collage.</p>
+              </h3>
+              <h3>
+                <p>My father name is MR.Kulu Singh Rawat.</p>
+              </h3>
+              <h3>
+                <p>My mother name is Ms.Parma Devi.</p>
+              </h3>
+              <h3>
+                <p>I have one brother and one sister.I am 18 year old.</p>
+              </h3>
+              <h3>
+                <p>
+                  I want become softwere doveloper.My hobbies are red books
+                  ,listiing muisc.
+                </p>
+              </h3>
+                 
+            </td>
+          </tr>
+        </table>
+             {" "}
+      </div>
+      <br />
+      <br />
+    </div>
+  );
+}
+Garlly.js---------------
+import "./styles.css";
+
+export default function Gerlly() {
+  return (
+    <div className="Gerlly">
+      <br />
+      <br />   {" "}
+      <div id="gallery">
+              <h1 class="text-center">Gallery</h1>
+        <div style={{ marginLeft: "3%" }} class="text-center">
+          <br />
+          <h3>Gurukul life</h3>
+          <table>
+            <tr>
+                 {" "}
+              <td>
+                <img
+                  width="90%"
+                  height="10%"
+                  src={require("./image/IMG20220825123051.jpg")}
+                ></img>
+                   
+              </td>
+                 {" "}
+              <td>
+                <img
+                  width="90%"
+                  height="20%"
+                  src={require("./image/sanju.jpg")}
+                ></img>
+                   {" "}
+              </td>
+                 {" "}
+              <td>
+                <img
+                  width="80%"
+                  height="20%"
+                  src={require("./image/IMG20220825123713.jpg")}
+                ></img>
+              </td>
+                 {" "}
+              <td>
+                <img
+                  width="100%"
+                  height="20%"
+                  src={require("./image/IMG20220825123033.jpg")}
+                ></img>
+                   {" "}
+              </td>
+            </tr>
+          </table>
+          <br />
+          <h3>School Life</h3>
+          <table>
+            <tr>
+                 {" "}
+              <td>
+                <img
+                  width="97%"
+                  height="20%"
+                  src={require("./image/IMG-20220702-WA0004.jpg")}
+                ></img>
+                   
+              </td>
+                  <td></td>    <td></td>   {" "}
+              <td>
+                <img
+                  width="90%"
+                  height="20%"
+                  src={require("./image/IMG-20220702-WA0009.jpg")}
+                ></img>
+                   {" "}
+              </td>
+            </tr>
+          </table>
+          <br />
+          <table>
+            <tr>
+                 {" "}
+              <td>
+                <img
+                  width="70%"
+                  height="10%"
+                  src={require("./image/IMG-20220702-WA0044.jpg")}
+                ></img>{" "}
+                 
+              </td>
+                 {" "}
+              <td>
+                <img
+                  width="50%"
+                  height="20%"
+                  src={require("./image/IMG_20220620_070415_563.jpg")}
+                ></img>
+              </td>
+              <td>
+                <img
+                  width="70%"
+                  height="30%"
+                  src={require("./image/IMG_20220319_105148.jpg")}
+                ></img>
+                   {" "}
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <br />
+    </div>
+  );
+}
+Skill.js---------------
+import "./styles.css";
+
+export default function Sekill() {
+  return (
+    <div className="Sekill">
+      <br />
+      <br />
+         {" "}
+      <div id="sekill">
+        <p>HTML</p>
+        <div class="progress">
+          <div
+            class="progress-bar bg-success"
+            role="progressbar"
+            style={{ width: "100%" }}
+            aria-valuenow="25"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            100%
+          </div>
+        </div>
+        <p>CSS</p>
+        <div class="progress">
+          <div
+            class="progress-bar bg-info"
+            role="progressbar"
+            style={{ width: "80%" }}
+            aria-valuenow="50"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            80%
+          </div>
+        </div>
+
+        <p>JavaScript</p>
+        <div class="progress">
+          <div
+            style={{ backgroundColor: "red" }}
+            class="progress-bar bg-warning"
+            role="progressbar"
+            style={{ width: "70%" }}
+            aria-valuenow="75"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            70%
+          </div>
+        </div>
+
+        <p>PHP</p>
+        <div class="progress">
+          <div
+            class="progress-bar bg-danger"
+            role="progressbar"
+            style={{ width: "75%" }}
+            aria-valuenow="100"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            75%
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
+    </div>
+  );
+}
+Contcat.js----------------
+import "./styles.css";
+
+export default function Contact() {
+  return (
+    <div className="Contact">
+      <br />
+      <br />
+         {" "}
+      <div id="contact">
+        <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-2">
+          <div class="text-center">
+            <h3 class="white-text mb-5 mt-4 font-weight-bold">
+              <strong>CONTACT</strong>{" "}
+              <a class="green-text font-weight-bold">
+                <strong> US</strong>
+              </a>
+            </h3>
+          </div>
+
+          <div style={{ marginLeft: "35%" }} class="md-form">
+            <label style={{ marginRight: "85%" }} for="Form-email5" class="">
+              Your name :
+            </label>
+            <input
+              style={{ width: "50%" }}
+              type="text"
+              id="Form-email5"
+              class="form-control white-text"
+            ></input>
+          </div>
+
+          <div style={{ marginLeft: "35%" }} class="md-form">
+            <label style={{ marginRight: "85%" }} for="Form-pass5">
+              Your mail :
+            </label>
+            <input
+              style={{ width: "50%" }}
+              type="text"
+              id="Form-pass5"
+              class="form-control"
+            ></input>
+          </div>
+
+          <div style={{ marginLeft: "35%" }} class="md-form mb-5">
+            <label style={{ marginRight: "85%" }} for="message5">
+              Your message :
+            </label>
+            <textarea
+              style={{ width: "50%" }}
+              type="text"
+              id="message5"
+              name="message5"
+              rows="2"
+              class="form-control md-textarea white-text"
+            ></textarea>
+          </div>
+          <br />
+          <div class="row d-flex align-items-center">
+            <div
+              style={{ marginLeft: "42%" }}
+              class="text-center col-md-2 col-md-6"
+            >
+              <button
+                type="button"
+                class="btn btn-success btn-block btn-rounded z-depth-1 waves-effect waves-light"
+              >
+                Send message
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
+    </div>
+  );
+}
+index.js-----------------------
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import App from "./App";
+import Home from "./Home";
+import About from "./About";
+import Gerlly from "./Gerlly";
+import Skill from "./Skill";
+import Contact from "./Contact";
+
+export default function Main() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="Gerlly" element={<Gerlly />} />
+          <Route path="skill" element={<Skill />} />
+          <Route path="contact" element={<Contact />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Main />);
